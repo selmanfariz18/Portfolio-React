@@ -47,6 +47,7 @@
 }
 
 .skillBarText>p {
+    display: flex;
     font-size: 0.9rem;
     font-weight: 200;
 }
@@ -59,13 +60,16 @@
 
 @media screen and (max-width:480px){
     .skillBarText>p{
+        display: flex;
         font-size: 3vm;
     }
     .skillBarImg {
+        display: flex;
         height: 2.25rem;
         width: 2.25rem;
     }
     .skillBarText>h2 {
+        display: flex;
         font-size: 5vm;
     }
 }
