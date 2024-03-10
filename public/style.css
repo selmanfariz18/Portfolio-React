@@ -8,7 +8,9 @@
 }
 
 body {
-    background: rgb(30, 30, 30);
+    background-image: url(sky.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
     color: white;
     overflow: hidden;
     overflow-y: scroll;
