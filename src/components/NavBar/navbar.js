@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/contact.png';
 import { Link } from 'react-scroll';
 import menuIcon from '../../assets/menu.png'; // Add your menu icon asset path
 
-const NavBar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+const NavBar = ({ isMenuOpen, setIsMenuOpen }) => { // Use props passed from the parent
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <nav className={`navbar ${isMenuOpen ? 'expanded' : ''}`}> {/* Add a class based on isMenuOpen */}
+        <nav className={`navbar ${isMenuOpen ? 'expanded' : ''}`}> {/* Use isMenuOpen from props */}
             <img src={logo} alt="logo" className='logo' />
     
             <div className={`menuToggle`} onClick={toggleMenu}>
@@ -36,7 +34,7 @@ const NavBar = () => {
                 </button>
             </div>
         </nav>
-    )
+    );
 }
 
 export default NavBar;
