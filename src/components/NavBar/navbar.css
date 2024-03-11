@@ -67,14 +67,19 @@
 
 @media (max-width: 768px) {
     .desktopMenu {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         position: absolute;
         top: 5rem; /* Adjust based on your navbar height */
         left: 0;
-        background: rgb(30, 30, 30);
+        background: rgb(3,1,13);
         padding: 1rem 0;
+        overflow: hidden;
+        max-height: 0; /* Initially hide the menu */
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.25s ease, opacity 0.25s ease, visibility 0.25s;
     }
 
     .mobileMenuBtn {
@@ -84,17 +89,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 1rem;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
         border-radius: 2rem;
         cursor: pointer;
     }
 
     .desktopMenu.active {
-        display: flex;
+        max-height: 500px; /* Adjust based on the content size of your expanded menu */
+        opacity: 1;
+        visibility: visible;
     }
 
     .desktopMenuListItem, .desktopMenuBtn {
         margin: 0.5rem 0;
+        padding-left: 5px;
+        padding-right: 5px;
         text-align: center;
     }
 
@@ -121,8 +133,12 @@
         object-fit: cover;
         height: 3rem;
         width: 4rem;
-        
+        transition: transform 0.5s ease;
     }
+    .navbar.expanded .menuIcon {
+        transform: rotate(90deg); /* Rotates the icon by 90 degrees when the menu is expanded */
+    }
+    
 }
 
 @media (min-width: 769px) {
