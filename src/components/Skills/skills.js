@@ -7,8 +7,8 @@ import AppDesign from '../../assets/app-design.png';
 const Skills = () => {
     return (
         <section id='skills'>
-            <span className='skillTitle'>What I Do?</span>
-            <span className='skillDesc'>I will develope websites, apps, with backend and frontend.</span>
+            <span className='skillTitle'>What can i Do?</span>
+            <span className='skillDesc'>I can develope websites, apps, with backend and frontend.</span>
             <div className='skillBars'>
                 <div className='skillBar'>
                     <img src={WebDesign} alt="WebDesign" className='skillBarImg'/>

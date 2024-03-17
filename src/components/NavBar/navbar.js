@@ -5,7 +5,6 @@ const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
 
   const toggleActiveClass = () => {
-    console.log('Toggling Class'); 
     setIsActive(!isActive);
   };
 
