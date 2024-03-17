@@ -1,152 +1,100 @@
-.navbar{
-    background: rgb(3,1,13);
-    height: 5rem;
-    width: 100vm;
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.logo{
-    object-fit: cover;
-    height: 3rem;
-    width: 4rem;
+ul {
+  list-style: none;
 }
 
-.desktopMenuListItem {
-    margin: 1rem;
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* navbar */
+.navbar {
+  background-color: aliceblue;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 70px;
+}
+
+
+/* logo  */
+.logo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ul  */
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 780px){
+  
+  /* hamburger */
+  .hamburger {
+    display: block;
     cursor: pointer;
-}
+    z-index: 1000;
+  }
 
-.desktopMenuListItem:hover {
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid yellow;
-}
-
-.desktopMenuBtn {
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-.desktopMenuImg {
-    object-fit: cover;
-    height: 1rem;
-    width:1rem;
-    margin: 1rem;
-}
-
-
-/* Hide menu toggle button in desktop view */
-.menuToggle {
-    display: none;
-}
-
-.contactMeDesktop {
-    display: none; /* Initially hide the desktop-only Contact Me button */
-}
-
-/* Additional styles for when the navbar is expanded */
-.navbar.expanded {
-    height: auto; /* Or set a specific height */
-}
-
-
-@media (max-width: 768px) {
-    .desktopMenu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 5rem; /* Adjust based on your navbar height */
-        left: 0;
-        background: rgb(3,1,13);
-        padding: 1rem 0;
-        overflow: hidden;
-        max-height: 0; /* Initially hide the menu */
-        opacity: 0;
-        visibility: hidden;
-        transition: max-height 0.25s ease, opacity 0.25s ease, visibility 0.25s;
+  .bar {
+        background-color: #120f0b;
+        width: 20px;
+        height: 3px;
+        display: block;
+        margin: 5px;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
-    .mobileMenuBtn {
-        background: white;
-        color: black;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 40px;
-        margin-right: 40px;
-        padding-left: 5px;
-        padding-right: 5px;
-        border-radius: 2rem;
-        cursor: pointer;
-    }
+  /* adding active class to the bars  */
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-    .desktopMenu.active {
-        max-height: 500px; /* Adjust based on the content size of your expanded menu */
-        opacity: 1;
-        visibility: visible;
-    }
 
-    .desktopMenuListItem, .desktopMenuBtn {
-        margin: 0.5rem 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        text-align: center;
-    }
+  /* navMenu */
 
-    .menuToggle {
-        display: block; /* Only show the menu toggle button in mobile view */
-        position: absolute;
-        right: 20px;
-        top: 15px;
-    }
+  .navMenu{
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    top: 70px;
+    left: -100%;
+    text-align: start;
+    width: 100%;
+    transition: 0.7s ease-in-out;
+    background-color: aliceblue;
+    padding: 10px;
+    z-index: 1000;
+  }
 
-    .contactMeDesktop {
-        display: none; /* Keep the desktop-only Contact Me button hidden */
-    }
-    .navbar.expanded .desktopMenu {
-        display: flex; /* This will already be set by the 'active' class, just included here for clarity */
-        height: 250px;
-    }
-    
-    /* Adjust the following as necessary based on your content's needs */
-    .content { /* Assuming your content has a class of 'content' */
-        padding-top: 10rem; /* Adjust this value based on the expanded navbar's height */
-    }
-    .menuIcon{
-        object-fit: cover;
-        height: 3rem;
-        width: 4rem;
-        transition: transform 0.5s ease;
-    }
-    .navbar.expanded .menuIcon {
-        transform: rotate(90deg); /* Rotates the icon by 90 degrees when the menu is expanded */
-    }
-    
-}
+  .navMenu.active{
+    left: 0;
+  }
 
-@media (min-width: 769px) {
-    .contactMeDesktop {
-        display: block; /* Show the desktop-only Contact Me button */
-    }
-    
-    .mobileMenuBtn {
-        display: none; /* Hide the in-menu Contact Me button in desktop view */
-    }
+  .navMenu li {
+    margin: 16px 0;
+  }
 }

@@ -1,40 +1,46 @@
-import React from 'react';
+import React, { useState } from "react";
 import './navbar.css';
-import logo from '../../assets/logo.png';
-import contactImg from '../../assets/contact.png';
-import { Link } from 'react-router-dom';
-import menuIcon from '../../assets/menu.png'; // Add your menu icon asset path
 
-const NavBar = ({ isMenuOpen, setIsMenuOpen }) => { // Use props passed from the parent
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+const NavBar = () => {
+  const [isActive, setIsActive] = useState(false);
 
-    return (
-        <nav className={`navbar ${isMenuOpen ? 'expanded' : ''}`}> {/* Use isMenuOpen from props */}
-            <img src={logo} alt="logo" className='logo' />
+  const toggleActiveClass = () => {
+    console.log('Toggling Class'); 
+    setIsActive(!isActive);
+  };
 
-            <div className={`menuToggle`} onClick={toggleMenu}>
-                <img src={menuIcon} alt="" className='menuIcon' />
-            </div>
+  const removeActive = () => {
+    setIsActive(false);
+  };
 
-            <div className={`desktopMenu ${isMenuOpen ? 'active' : ''}`}>
-                <Link to="/" className='desktopMenuListItem'>Home</Link>
-                <Link to="/certificates" className='desktopMenuListItem'>Certificates</Link>
-                <Link to="/projects" className='desktopMenuListItem'>Projects</Link>
-                <Link to="/contact" className='desktopMenuListItem'>Contact Me</Link>
-                <button className='mobileMenuBtn'>
-                    <img src={contactImg} alt="" className='desktopMenuImg' />
-                    Contact Me
-                </button>
-            </div>
-
-            <div className="contactMeDesktop">
-                <button className='desktopMenuBtn'>
-                    <img src={contactImg} alt="" className='desktopMenuImg' />
-                    Contact Me
-                </button>
-            </div>
+  return (
+    <div className="App">
+      <header className="App-header">
+        <nav className="navbar">
+          <a href="/" className="logo">Fariz.deb</a>
+          <ul className={`navMenu ${isActive ? 'active' : ''}`}>
+            <li onClick={removeActive}>
+              <a href="/" className="navLink">Home</a>
+            </li>
+            <li onClick={removeActive}>
+              <a href="/certificates" className="navLink">Certificates</a>
+            </li>
+            <li onClick={removeActive}>
+              <a href="/projects" className="navLink">Projects</a>
+            </li>
+            <li onClick={removeActive}>
+              <a href="/contact" className="navLink">Contact</a>
+            </li>
+          </ul>
+          <div className={`hamburger ${isActive ? 'active' : ''}`} onClick={toggleActiveClass}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </nav>
-    );
-}
+      </header>
+    </div>
+  );
+};
 
 export default NavBar;
