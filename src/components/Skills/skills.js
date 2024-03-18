@@ -27,18 +27,19 @@ const Skills = () => {
                 <div className='skillBar'>
                     <div className='skillBarBadgeText'>
                         <h2>I can work with : </h2>
-                        <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="HTML Badge" />
-                        <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS Badge" />
-                        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS Badge" />
-                        <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap Badge" />
-                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
-                        <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" />
-                        <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" alt="Vue.js Badge" />
-                        <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django Badge" />
-                        <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge" />
-                        <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter Badge" />
-                        <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart Badge" />
-                        <img src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS Badge" />
+                        <img src="https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=black" alt="HTML Badge" />
+                        <img src="https://img.shields.io/badge/CSS-white?&style=for-the-badge&logo=css3&logoColor=black" alt="CSS Badge" />
+                        <img src="https://img.shields.io/badge/Tailwind_CSS-white?style=for-the-badge&logo=tailwind-css&logoColor=black" alt="Tailwind CSS Badge" />
+                        <img src="https://img.shields.io/badge/Bootstrap-white?style=for-the-badge&logo=bootstrap&logoColor=black" alt="Bootstrap Badge" />
+                        <img src="https://img.shields.io/badge/JavaScript-white?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge" />
+                        <img src="https://img.shields.io/badge/React-white?style=for-the-badge&logo=react&logoColor=black" alt="React Badge" />
+                        <img src="https://img.shields.io/badge/Vue.js-white?style=for-the-badge&logo=vue.js&logoColor=black" alt="Vue.js Badge" />
+                        <img src="https://img.shields.io/badge/Django-white?style=for-the-badge&logo=django&logoColor=black" alt="Django Badge" />
+                        <img src="https://img.shields.io/badge/Python-white?style=for-the-badge&logo=python&logoColor=black" alt="Python Badge" />
+                        <img src="https://img.shields.io/badge/Flutter-white?style=for-the-badge&logo=flutter&logoColor=black" alt="Flutter Badge" />
+                        <img src="https://img.shields.io/badge/Dart-white?style=for-the-badge&logo=dart&logoColor=black" alt="Dart Badge" />
+                        <img src="https://img.shields.io/badge/Amazon_AWS-white?style=for-the-badge&logo=amazon-aws&logoColor=black" alt="AWS Badge" />
+
                     </div>
                 </div>
             </div>
