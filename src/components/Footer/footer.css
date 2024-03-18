@@ -1,0 +1,43 @@
+.footer {
+    text-align: center;
+    background-color: #a49c9c;
+}
+
+.footer-container {
+    padding-top: 1rem;
+}
+
+.social-buttons {
+    margin-bottom: 1rem;
+    background-color: aqua;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 0.5rem;
+    color: #000; /* Icon color */
+    font-size: 1.5rem;
+    background-color: blue;
+}
+
+/* Specific button styles */
+.social-button.facebook {
+    /* Facebook button specific styles */
+}
+
+.social-button.twitter {
+    /* Twitter button specific styles */
+}
+
+/* Add other button styles */
+
+.footer-bottom {
+    text-align: center;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+}
+
+.footer-bottom a {
+    color: #000;
+}
