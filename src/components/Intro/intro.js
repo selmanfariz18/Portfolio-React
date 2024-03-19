@@ -17,7 +17,9 @@ const Intro = () => {
                     <a href={resume} ><button className='btn'>Resume</button></a>
                 </div>
             </div>
+            <div className='imageDiv'>
             <img src={bg} alt="profile" className='bg'/>
+            </div>
         </section>
     )
 }
