@@ -26,7 +26,7 @@ const Skills = () => {
                 </div>
                 <div className='skillBar'>
                     <div className='skillBarBadgeText'>
-                        <h2>I can work with : </h2>
+                        <h2 className='skillBadgeh2'>I can work with : </h2>
                         <img src="https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=black" alt="HTML Badge" />
                         <img src="https://img.shields.io/badge/CSS-white?&style=for-the-badge&logo=css3&logoColor=black" alt="CSS Badge" />
                         <img src="https://img.shields.io/badge/Tailwind_CSS-white?style=for-the-badge&logo=tailwind-css&logoColor=black" alt="Tailwind CSS Badge" />

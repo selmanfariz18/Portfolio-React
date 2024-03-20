@@ -3,7 +3,7 @@ import './intro.css';
 import bg from '../../assets/image.png';
 import btnImg from '../../assets/hireme.png';
 import { Link } from 'react-router-dom';
-import resume from '../../assets/SELMANULResume.pdf'
+import resume from '../../assets/Resume_Selman.pdf'
 
 const Intro = () => {
     return (
