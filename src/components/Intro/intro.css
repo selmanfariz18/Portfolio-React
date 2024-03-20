@@ -9,7 +9,7 @@
 .bg {
     position: absolute;
     top: -4rem;
-    right: 0;
+    right: 200px;
     z-index: -1;
     object-fit: cover;
     height: 100vh;
@@ -66,8 +66,8 @@
 @media screen and (max-width:768px) {
     .bg {
         position: absolute;
-        top: -180px; /* Adjust if necessary */
-        right: 0px; /* Reset or adjust this value to ensure it doesn't create horizontal overflow */
+        top: -130px; /* Adjust if necessary */
+        right: 30px; /* Reset or adjust this value to ensure it doesn't create horizontal overflow */
         width: 200px; /* Ensure it does not exceed the viewport width */
         height: 700px; /* Maintain aspect ratio */
         z-index: -1; /* Cover the designated area without stretching */

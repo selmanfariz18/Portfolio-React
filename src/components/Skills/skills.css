@@ -52,7 +52,10 @@
     font-weight: 200;
 }
 .skillBarBadgeText{
-    justify-content: center;
+    justify-content:space-between;
+    text-align:center;
+}
+.skillBadgeh2{
     text-align: center;
 }
 
