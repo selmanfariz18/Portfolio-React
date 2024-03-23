@@ -87,6 +87,7 @@
 .cardbtns{
     display: flex;
     flex-direction: row;
+
 }
 
 .cardbtns a{
@@ -97,6 +98,8 @@
     border-radius: 10px;
     font-size: 15px;
     padding: 5px;
+    height: 30px;
+    width: 30px;
 }
 
 .card__footer span:first-of-type {

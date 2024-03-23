@@ -1,6 +1,12 @@
 import React from 'react';
 import './projects.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faPlay } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 
 const Projects = () => {
     return (
@@ -16,8 +22,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
@@ -29,8 +35,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
@@ -42,8 +48,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
@@ -55,8 +61,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
@@ -68,8 +74,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
@@ -81,8 +87,8 @@ const Projects = () => {
                     </span>
                     <span className="card__action">
                         <div className='cardbtns'>
-                            <a href='/'><p>Live</p></a>
-                            <a href='/'><p>Code</p></a>
+                            <a href='/'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='/'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
