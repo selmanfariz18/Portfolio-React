@@ -1,8 +1,12 @@
 .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     background-color: white;
     padding-top: 0;
     padding-bottom: 0;
+    z-index: 1000; /* Ensures the footer stays on top of other content */
 }
 
 .footer-container {
