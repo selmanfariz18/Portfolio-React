@@ -1,4 +1,15 @@
 /* General container and row setup */
+
+.ContactForm{
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+.ContactForm h1{
+    margin: 20px;
+}
+
 .container {
     width: 100%;
     padding-right: var(--bs-gutter-x,.75rem);
@@ -10,8 +21,7 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    
   }
   
   /* Text alignment */
@@ -27,6 +37,7 @@
   
   .formRow {
     margin-bottom: 1rem;
+    width: 100%;
   }
   
   /* Input and textarea styling */
