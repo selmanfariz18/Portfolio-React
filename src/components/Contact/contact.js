@@ -29,7 +29,7 @@ const Contact = () => {
     }, 5000);
   };
   
-  console.log('Public Key:', process.env.REACT_APP_SERVICE_ID);
+
 
   // Function called on submit that uses emailjs to send email of valid contact form
   const onSubmit = async (data) => {
