@@ -106,7 +106,7 @@ const Projects = () => {
                     </span>
                 </div>
             </div>
-            <button className='projectsBtn'>See More</button>
+            <a href='https://github.com/selmanfariz18?tab=repositories' className='projectsBtn'>See More on my Github Repo</a>
         </section>
     );
 }
