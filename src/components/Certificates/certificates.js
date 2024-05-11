@@ -8,6 +8,7 @@ import iedc_summit from '../../assets/certificates/IEDC_summit_2022.png'
 import talk_session from '../../assets/certificates/talk_session.png'
 import backend_api from '../../assets/certificates/backend_api_udemy_certificate.png'
 import codestorm from '../../assets/certificates/codestorm.png'
+import TinkerHack from '../../assets/certificates/Selmanul_Farizy_K_A_Tinkerhack.jpg'
 
 
 
@@ -16,6 +17,18 @@ const Certificates = () => {
         <section id='certificates'>
             <h2 className='projectsTitle'>Certificates</h2>
             <div className='projectsBlocks'>
+                <div className="card">
+                    <a href='https://drive.google.com/uc?id=1PRQeuMVchNiaHWWhrbozfwzn_rxTRZEP' target="_blank" rel="noopener noreferrer" role='button'>
+                        {/* https://drive.google.com/file/d/1PRQeuMVchNiaHWWhrbozfwzn_rxTRZEP/view?usp=drive_link */}
+                        <div >
+                            <img src={TinkerHack} alt="TinkerHack organizer certificate" className="card__img"></img>
+                            <span className="card__footer">
+                                <span>Organizer|Tink-Her-Hack 2.0</span>
+                                <span>2nd and 3rd March 2024</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
                 {/* foss 3.0 */}
                 <div className="card">
                     <a href='https://drive.google.com/uc?id=1CDdYNNFJ0hu753g3MrFwfP-k8X4k2Z-A' target="_blank" rel="noopener noreferrer" role='button'>
