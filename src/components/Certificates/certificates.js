@@ -9,6 +9,8 @@ import talk_session from '../../assets/certificates/talk_session.png'
 import backend_api from '../../assets/certificates/backend_api_udemy_certificate.png'
 import codestorm from '../../assets/certificates/codestorm.png'
 import TinkerHack from '../../assets/certificates/Selmanul_Farizy_K_A_Tinkerhack.jpg'
+import ai_workshop from '../../assets/certificates/Ai workshop certificate Tinkerhub collab-1.png'
+import python_workshop from '../../assets/certificates/python_workshop-1.png'
 
 
 
@@ -100,6 +102,30 @@ const Certificates = () => {
                             <span className="card__footer">
                                 <span>Codestorm (Hackathon)</span>
                                 <span>19th-20th Aug 2023</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div className="card">
+                    <a href='https://drive.google.com/uc?id=1YvOuJ9sxyFX9hcjYQpgYQX_VP_bhrPXq' target="_blank" rel="noopener noreferrer" role='button'>
+                        {/* https://drive.google.com/file/d/1YvOuJ9sxyFX9hcjYQpgYQX_VP_bhrPXq/view?usp=drive_link */}
+                        <div >
+                            <img src={ai_workshop} alt="mentor certificate" className="card__img"></img>
+                            <span className="card__footer">
+                                <span>Ai workshop</span>
+                                <span>15th january 2023</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div className="card">
+                    <a href='https://drive.google.com/uc?id=1MDw-gtVrJEuryJpbvyJ9yHHQDJPM5ZiA' target="_blank" rel="noopener noreferrer" role='button'>
+                        {/* https://drive.google.com/file/d/1MDw-gtVrJEuryJpbvyJ9yHHQDJPM5ZiA/view?usp=drive_link */}
+                        <div >
+                            <img src={python_workshop} alt="mentor certificate" className="card__img"></img>
+                            <span className="card__footer">
+                                <span>Python Workshop</span>
+                                <span>30th june and 1th july 2022</span>
                             </span>
                         </div>
                     </a>
