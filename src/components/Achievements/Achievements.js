@@ -20,33 +20,10 @@ const Achievements = () => {
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0", color: "white" }}
-            align="right"
             variant="body2"
             color="text.secondary"
           >
-            9:30 am
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <FastfoodIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
-              Eat
-            </Typography>
-            <Typography>Because you need strength</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0", color: "white" }}
-            variant="body2"
-            color="text.secondary"
-          >
-            10:00 am
+            December 2021 - January 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -57,18 +34,22 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Course Completed
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Joy of Programming Course by Monschool. Guidance under
+              TinkerhubKMEA.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
+
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0", color: "white" }}
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            January 2022 - February 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -79,9 +60,12 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Mentor
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Mentorship provided to students doing Joy of Programming Course by
+              Monschool, Under TinkerhubKMEA.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -90,7 +74,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            5th March 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -101,9 +85,13 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Python Mentor
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Python Mentor in the learning station conducted by TinkerHub
+              Foundation, IEDC Summit 2022, at St Josephs College of Engineering
+              & Technology, Palai.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -112,7 +100,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            1st July 2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -123,9 +111,12 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Python workshop
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Participated in 2- days python workshop, conducted by
+              TinkerhubKMEA.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -134,7 +125,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            17th September 2022{" "}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -145,9 +136,12 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Python-Django Internship
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Done a 30 hrs Internship in Python With Django Framework, Held at
+              KMEA Engineering College, Done by AESTER INDIA [P] LTD.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -156,7 +150,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            25th October - 12th November 2022{" "}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -167,9 +161,13 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Computer Hardware And Networking
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Done a 50 hrs Internship course conducted during extra sessions
+              after regular academic hours, from LBS institute of Technology For
+              Women.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -178,7 +176,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            20th November 2022{" "}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -189,9 +187,12 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Volunteer
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Volunteer for `Digital Skills Project`, Conducted by TinkerHub on
+              CITIC CUSAT.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -200,7 +201,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            29th November 2022{" "}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -211,9 +212,12 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Git/Github
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>
+              Taken an evening session on Git/Github in ccf lab , conducted by
+              TinkerhubKMEA.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -222,7 +226,7 @@ const Achievements = () => {
             variant="body2"
             color="text.secondary"
           >
-            10:00 am
+            2021 - 2023{" "}
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
@@ -233,9 +237,59 @@ const Achievements = () => {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <Typography variant="h6" component="span">
-              Code
+              Execom Member
             </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
+            <Typography>Execom member at Tech Team TinkerhubKMEA.</Typography>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0", color: "white" }}
+            variant="body2"
+            color="text.secondary"
+          >
+            2022 - 2023{" "}
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+              <LaptopMacIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Startup Founder - TZET IT SOLUTIONS PVT LTD
+            </Typography>
+            <Typography>
+              Started a service based startup with 9 members, Incubated at KMEA
+              Engineering College.
+            </Typography>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0", color: "white" }}
+            variant="body2"
+            color="text.secondary"
+          >
+            28th April 2023{" "}
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+              <LaptopMacIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <Typography variant="h6" component="span">
+              Website Developer (Hack23)
+            </Typography>
+            <Typography>
+              Developed a website for Hack23, 24 hrs hackathon, conducted by the
+              CS Department as part of Kapricious23.
+            </Typography>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
