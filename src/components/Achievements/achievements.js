@@ -602,7 +602,7 @@ const Achievements = () => {
               variant="body2"
               color="text.secondary"
             >
-              13th February 2024
+              13th February 2025
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
