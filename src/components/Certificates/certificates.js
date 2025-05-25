@@ -31,6 +31,7 @@ const Certificates = () => {
                 src={TinkerHack}
                 alt="TinkerHack organizer certificate"
                 className="card__img"
+                loading="lazy"
               ></img>
               <span className="card__footer">
                 <span>Organizer|Tink-Her-Hack 2.0</span>

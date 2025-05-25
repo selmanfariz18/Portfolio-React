@@ -4,16 +4,13 @@ import './projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faPlay } from '@fortawesome/free-solid-svg-icons';
 
+// Import images directly
 import dot_connect from '../../assets/projects/dot_connect.png';
 import ictacme from '../../assets/projects/ICTACME.png';
 import hack3_0 from '../../assets/projects/Hack_3.0.png';
 import fluid_simulator from '../../assets/projects/fluid_simulator.png';
 import mp3_player from '../../assets/projects/mp3_player.png';
 import weather_web from '../../assets/projects/weather_web.png';
-
-
-
-
 
 const Projects = () => {
     return (
@@ -23,7 +20,12 @@ const Projects = () => {
             <div className='projectsBlocks'>
                 {/* Dot_connect */}
                 <div className="card">
-                    <img src={dot_connect} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={dot_connect} 
+                        alt="Dot Connect Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>Dot_Connect</span>
                         <span>Game developed using React js</span>
@@ -37,7 +39,12 @@ const Projects = () => {
                 </div>
                 {/* ICTACME */}
                 <div className="card">
-                    <img src={ictacme} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={ictacme} 
+                        alt="ICTACME Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>ICTACME</span>
                         <span>HTML, Tailwind_CSS</span>
@@ -51,7 +58,12 @@ const Projects = () => {
                 </div>
                 {/* Hack 3.0 */}
                 <div className="card">
-                    <img src={hack3_0} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={hack3_0} 
+                        alt="Hack 3.0 Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>Hack_3.0</span>
                         <span>HTML, CSS, JS</span>
@@ -65,7 +77,12 @@ const Projects = () => {
                 </div>
                 {/* Fluid_simulator */}
                 <div className="card">
-                    <img src={fluid_simulator} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={fluid_simulator} 
+                        alt="Fluid Simulator Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>Fluid_simulator</span>
                         <span>HTML, CSS, WEBGL-js</span>
@@ -79,7 +96,12 @@ const Projects = () => {
                 </div>
                 {/* MP3 player */}
                 <div className="card">
-                    <img src={mp3_player} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={mp3_player} 
+                        alt="MP3 Player Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>MP3-Player</span>
                         <span>Python</span>
@@ -93,7 +115,12 @@ const Projects = () => {
                 </div>
                 {/* Weather_web */}
                 <div className="card">
-                    <img src={weather_web} alt="balloon with an emoji face" className="card__img"></img>
+                    <img 
+                        src={weather_web} 
+                        alt="Weather Web Project" 
+                        className="card__img"
+                        loading="lazy"
+                    />
                     <span className="card__footer">
                         <span>Weather App</span>
                         <span>HTML, CSS, JS</span>

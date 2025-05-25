@@ -11,4 +11,112 @@
     padding: 0 1rem;
 }
 
+.projectsTitle {
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.projectsBlocks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.card {
+    --blur: 16px;
+    --size: clamp(300px, 50vmin, 600px);
+    width: var(--size);
+    aspect-ratio: 4 / 3;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: #000;
+    transform: translateZ(0);
+    margin: 10px;
+    flex: 1 1 calc(33% - 40px);
+    will-change: transform;
+    transition: transform 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+    will-change: transform;
+}
+
+.card:hover .card__img {
+    transform: scale(1.05);
+}
+
+.card__footer {
+    background: hsl(0 0% 100% / 0.75);
+    backdrop-filter: blur(var(--blur));
+    padding: 0 1.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0.5ch;
+    height: 30%;
+    align-content: center;
+}
+
+.card__footer span:first-of-type {
+    font-size: calc(var(--size) * 0.025);
+    font-weight: 500;
+}
+
+.card__footer span:last-of-type {
+    font-size: calc(var(--size) * 0.020);
+    color: #666;
+}
+
+.projectsBtn {
+    margin: 3rem 0;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: white;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease-out;
+}
+
+.projectsBtn:hover {
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 780px) {
+    .card {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+    
+    .projectsTitle {
+        font-size: 2rem;
+    }
+    
+    .card__footer span:first-of-type {
+        font-size: 1.2rem;
+    }
+    
+    .card__footer span:last-of-type {
+        font-size: 0.9rem;
+    }
+}
+
 /* .projectBlocks and related class style are fetched from projects.css */

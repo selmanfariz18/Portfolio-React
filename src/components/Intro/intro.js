@@ -28,11 +28,16 @@ const Intro = () => {
           </Link>
           <a href={resume} target="_blank" rel="noopener noreferrer">
             <button className="btn">Resume</button>
-          </a>{" "}
+          </a>
         </div>
       </div>
       <div className="imageDiv">
-        <img src={bg} alt="profile" className="bg" />
+        <img 
+          src={bg} 
+          alt="profile" 
+          className="bg" 
+          loading="lazy"
+        />
       </div>
     </section>
   );
