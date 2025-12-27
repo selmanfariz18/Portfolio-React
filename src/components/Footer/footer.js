@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
 
             <div className='footer-bottom'>
-                © 2024 Copyright
+                © 2025 Copyright
                 <br></br>
                 <a href='/'>
                     salmanulfarizyka@gmail.com

@@ -9,6 +9,7 @@
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
+    color: white;
 }
 
 .projectsTitle {
@@ -105,15 +106,15 @@
         flex: 1 1 100%;
         margin: 10px 0;
     }
-    
+
     .projectsTitle {
         font-size: 2rem;
     }
-    
+
     .card__footer span:first-of-type {
         font-size: 1.2rem;
     }
-    
+
     .card__footer span:last-of-type {
         font-size: 0.9rem;
     }

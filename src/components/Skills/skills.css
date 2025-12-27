@@ -1,4 +1,4 @@
-#skills{
+#skills {
     overflow: hidden;
     width: 100vw;
     max-width: 65rem;
@@ -8,6 +8,7 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    color: white;
 }
 
 .skillTitle {
@@ -36,8 +37,10 @@
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.1); /* Light shade with transparency */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Box effect */
+    background: rgba(255, 255, 255, 0.1);
+    /* Light shade with transparency */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* Box effect */
 }
 
 .skillBarImg {
@@ -52,30 +55,34 @@
     font-size: 0.9rem;
     font-weight: 200;
 }
-.skillBarBadgeText{
-    justify-content:space-between;
-    text-align:center;
-}
-.skillBadgeh2{
+
+.skillBarBadgeText {
+    justify-content: space-between;
     text-align: center;
 }
 
-@media screen and (max-width:720px){
-    .skillBarText>p{
+.skillBadgeh2 {
+    text-align: center;
+}
+
+@media screen and (max-width:720px) {
+    .skillBarText>p {
         font-size: 2vm;
     }
 }
 
-@media screen and (max-width:480px){
-    .skillBarText>p{
+@media screen and (max-width:480px) {
+    .skillBarText>p {
         display: flex;
         font-size: 3vm;
     }
+
     .skillBarImg {
         display: flex;
         height: 2.25rem;
         width: 2.25rem;
     }
+
     .skillBarText>h2 {
         display: flex;
         font-size: 5vm;

@@ -9,6 +9,7 @@
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
+    color: white
 }
 
 .projectsTitle {
@@ -46,9 +47,11 @@
     0% {
         opacity: 0.6;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.6;
     }
@@ -110,22 +113,20 @@
     width: calc(var(--size) * 0.30);
     bottom: 30%;
     right: 1.5rem;
-    transform: translateY(50%)
-      translateY(calc((var(--size) * 0.4)))
-      translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
+    transform: translateY(50%) translateY(calc((var(--size) * 0.4))) translateY(calc(var(--hover, 0) * (var(--size) * -0.4)));
     display: grid;
     place-items: center;
     border-radius: 0.5rem;
     transition: transform 0.2s;
 }
 
-.cardbtns{
+.cardbtns {
     display: flex;
     flex-direction: row;
 
 }
 
-.cardbtns a{
+.cardbtns a {
     margin-left: 5px;
     margin-right: 5px;
     background: hsl(0 0% 100% / 0.75);
@@ -160,6 +161,7 @@
 
 @media screen and (max-width: 780px) {
     .card {
-        flex: 1 1 100%; /* Make each card take full width on smaller screens */
+        flex: 1 1 100%;
+        /* Make each card take full width on smaller screens */
     }
 }
