@@ -78,7 +78,7 @@ const Contact = () => {
                                 <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
                                     {/* Row 1 of form */}
                                     <div className='row formRow'>
-                                        <div className='col-12'>
+                                        <div className='col-10'>
                                             <input
                                                 type='text'
                                                 name='name'
@@ -96,7 +96,7 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div className='row formRow'>
-                                        <div className='col-12'>
+                                        <div className='col-10'>
                                             <input
                                                 type='email'
                                                 name='email'
@@ -114,7 +114,7 @@ const Contact = () => {
                                     </div>
                                     {/* Row 2 of form */}
                                     <div className='row formRow'>
-                                        <div className='col'>
+                                        <div className='col-10'>
                                             <input
                                                 type='text'
                                                 name='subject'
@@ -135,7 +135,7 @@ const Contact = () => {
                                     </div>
                                     {/* Row 3 of form */}
                                     <div className='row formRow'>
-                                        <div className='col'>
+                                        <div className='col-10'>
                                             <textarea
                                                 rows={3}
                                                 name='message'
