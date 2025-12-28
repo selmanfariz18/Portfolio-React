@@ -6,7 +6,8 @@
     background-color: white;
     padding-top: 0;
     padding-bottom: 0;
-    z-index: 1000; /* Ensures the footer stays on top of other content */
+    z-index: 1000;
+    /* Ensures the footer stays on top of other content */
 }
 
 .footer-container {
@@ -24,7 +25,8 @@
 .social-button {
     display: inline-block;
     margin: 0.5rem;
-    color: #000; /* Icon color */
+    color: #000;
+    /* Icon color */
     font-size: 20px;
     background-color: white;
     padding-bottom: 0;
