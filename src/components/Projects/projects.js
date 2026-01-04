@@ -11,6 +11,7 @@ import hack3_0 from '../../assets/projects/Hack_3.0.png';
 import fluid_simulator from '../../assets/projects/fluid_simulator.png';
 import mp3_player from '../../assets/projects/mp3_player.png';
 import weather_web from '../../assets/projects/weather_web.png';
+import qr_code_generator from '../../assets/projects/qr_code_generator.png';
 
 const Projects = () => {
     return (
@@ -20,9 +21,9 @@ const Projects = () => {
             <div className='projectsBlocks'>
                 {/* Dot_connect */}
                 <div className="card">
-                    <img 
-                        src={dot_connect} 
-                        alt="Dot Connect Project" 
+                    <img
+                        src={dot_connect}
+                        alt="Dot Connect Project"
                         className="card__img"
                         loading="lazy"
                     />
@@ -37,11 +38,68 @@ const Projects = () => {
                         </div>
                     </span>
                 </div>
+                {/* Fluid_simulator */}
+                <div className="card">
+                    <img
+                        src={fluid_simulator}
+                        alt="Fluid Simulator Project"
+                        className="card__img"
+                        loading="lazy"
+                    />
+                    <span className="card__footer">
+                        <span>Fluid_simulator</span>
+                        <span>HTML, CSS, WEBGL-js</span>
+                    </span>
+                    <span className="card__action">
+                        <div className='cardbtns'>
+                            <a href='https://github.com/selmanfariz18/Fluid-simulator.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='https://selmanfariz18.github.io/Fluid-simulator/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
+                        </div>
+                    </span>
+                </div>
+                {/* Qr_code_generator */}
+                <div className="card">
+                    <img
+                        src={qr_code_generator}
+                        alt="Qr Code Generator Project"
+                        className="card__img"
+                        loading="lazy"
+                    />
+                    <span className="card__footer">
+                        <span>QR Code Generator</span>
+                        <span>HTML, CSS</span>
+                    </span>
+                    <span className="card__action">
+                        <div className='cardbtns'>
+                            <a href='https://github.com/selmanfariz18/Qr-generator-HTML-' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='https://selmanfariz18.github.io/Qr-generator-HTML-/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
+                        </div>
+                    </span>
+                </div>
+                {/* Weather_web */}
+                <div className="card">
+                    <img
+                        src={weather_web}
+                        alt="Weather Web Project"
+                        className="card__img"
+                        loading="lazy"
+                    />
+                    <span className="card__footer">
+                        <span>Weather App</span>
+                        <span>HTML, CSS, JS</span>
+                    </span>
+                    <span className="card__action">
+                        <div className='cardbtns'>
+                            <a href='https://github.com/selmanfariz18/weather_app_web.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
+                            <a href='https://selmanfariz18.github.io/weather_app_web/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
+                        </div>
+                    </span>
+                </div>
                 {/* ICTACME */}
                 <div className="card">
-                    <img 
-                        src={ictacme} 
-                        alt="ICTACME Project" 
+                    <img
+                        src={ictacme}
+                        alt="ICTACME Project"
                         className="card__img"
                         loading="lazy"
                     />
@@ -58,9 +116,9 @@ const Projects = () => {
                 </div>
                 {/* Hack 3.0 */}
                 <div className="card">
-                    <img 
-                        src={hack3_0} 
-                        alt="Hack 3.0 Project" 
+                    <img
+                        src={hack3_0}
+                        alt="Hack 3.0 Project"
                         className="card__img"
                         loading="lazy"
                     />
@@ -75,30 +133,11 @@ const Projects = () => {
                         </div>
                     </span>
                 </div>
-                {/* Fluid_simulator */}
-                <div className="card">
-                    <img 
-                        src={fluid_simulator} 
-                        alt="Fluid Simulator Project" 
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Fluid_simulator</span>
-                        <span>HTML, CSS, WEBGL-js</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/Fluid-simulator.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/Fluid-simulator/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
                 {/* MP3 player */}
                 <div className="card">
-                    <img 
-                        src={mp3_player} 
-                        alt="MP3 Player Project" 
+                    <img
+                        src={mp3_player}
+                        alt="MP3 Player Project"
                         className="card__img"
                         loading="lazy"
                     />
@@ -110,25 +149,6 @@ const Projects = () => {
                         <div className='cardbtns'>
                             <a href='https://github.com/selmanfariz18/MP3-player.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
                             {/* <a href='/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a> */}
-                        </div>
-                    </span>
-                </div>
-                {/* Weather_web */}
-                <div className="card">
-                    <img 
-                        src={weather_web} 
-                        alt="Weather Web Project" 
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Weather App</span>
-                        <span>HTML, CSS, JS</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/weather_app_web.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/weather_app_web/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
                         </div>
                     </span>
                 </div>
