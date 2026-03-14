@@ -1,5 +1,5 @@
 #intro {
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 4.4rem);
     width: 100vw;
     max-width: 75rem;
     margin: 0 auto;
@@ -102,6 +102,18 @@
 }
 
 @media screen and (max-width:768px) {
+
+    #intro {
+        height: 100vh;
+    }
+
+    .introPara {
+        font-size: small;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: white;
+    }
+
     .bg {
         position: absolute;
         top: -130px;

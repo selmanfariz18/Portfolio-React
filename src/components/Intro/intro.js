@@ -16,9 +16,9 @@ const Intro = () => {
           Developer
         </span>
         <p className="introPara">
-          A CSE Engineer by degree, <br />
-          A Software Developer at <strong>Systalent</strong> by profession,<br />
-          A vibe-coder by nature.
+          A CS Engineer by degree <br />
+          A Software Developer at <strong>Systalent</strong> by profession<br />
+          A vibe-coder by nature
           {/* I craft clean, creative software solutions with a flow-state
           mindset — where great code meets great instinct. From building full-stack applications to
           exploring the edges of cybersecurity, I turn ideas into real, working products that speak

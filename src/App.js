@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/navbar';
-import Footer from "./components/Footer/footer";
+// import Footer from "./components/Footer/footer";
 import './App.css';
 
 // Lazy load components
@@ -41,7 +41,7 @@ function App() {
             </Routes>
           </Suspense>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );

@@ -27,9 +27,9 @@ const Footer = () => {
             </div>
 
             <div className='footer-bottom'>
-                © 2025 Copyright
+                © 2026 Copyright
                 <br></br>
-                <a href='/'>
+                <a href='mailto:salmanulfarizyka@gmail.com'>
                     salmanulfarizyka@gmail.com
                 </a>
             </div>
