@@ -617,6 +617,57 @@ const Achievements = () => {
               </Typography>
             </TimelineContent>
           </TimelineItem>
+
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: "auto 0", color: "white" }}
+              variant="body2"
+              color="text.secondary"
+            >
+              1th April 2025
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                Programmer Analyst
+              </Typography>
+              <Typography>
+                Joined as a Programmer Analyst at <strong>Systalent</strong>
+              </Typography>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: "auto 0", color: "white" }}
+              variant="body2"
+              color="text.secondary"
+            >
+              27th June 2025
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <Typography variant="h6" component="span">
+                Graduated
+              </Typography>
+              <Typography>
+                Graduated from KMEA Engineering College with a degree in Computer
+                Science and Engineering
+              </Typography>
+            </TimelineContent>
+          </TimelineItem>
         </Timeline>
       </div>
     </section>
