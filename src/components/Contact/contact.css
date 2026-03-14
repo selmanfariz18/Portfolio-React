@@ -135,3 +135,23 @@
   background: transparent;
   border: 0;
 }
+
+/* Social buttons in contact */
+.contact-social-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-social-button {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.contact-social-button:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
