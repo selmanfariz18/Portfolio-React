@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useRef } from "react";
 import "./intro.css";
 import bg from "../../assets/image.png";
 // import btnImg from "../../assets/hireme.png";
@@ -21,26 +21,78 @@ const badges = [
 ];
 
 const Intro = () => {
-  // Generate random positions, durations, and delays only on mount
-  const badgeStyles = useMemo(() => {
-    return badges.map(() => ({
-      top: `${Math.random() * 90}%`,
-      left: `${Math.random() * 90}%`,
-      animationDuration: `${Math.random() * 15 + 10}s`, // Between 10s and 25s
-      animationDelay: `-${Math.random() * 10}s`, // Start randomly within the animation cycle
+  const containerRef = useRef(null);
+  const badgeRefs = useRef([]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Initialize physics state for each badge
+    const badgePhysics = badges.map(() => ({
+      x: Math.random() * (container.clientWidth - 150), // Initial X (avoiding right edge overflow)
+      y: Math.random() * (container.clientHeight - 40), // Initial Y
+      vx: (Math.random() - 0.5) * 1.5, // Velocity X (-0.75 to 0.75 pixels per frame)
+      vy: (Math.random() - 0.5) * 1.5, // Velocity Y
     }));
+
+    let animationFrameId;
+
+    const updatePhysics = () => {
+      badgePhysics.forEach((badge, index) => {
+        const el = badgeRefs.current[index];
+        if (!el) return;
+
+        // Update positions
+        badge.x += badge.vx;
+        badge.y += badge.vy;
+
+        // Collision logic (bouncing off walls)
+        const rect = el.getBoundingClientRect();
+        // Fallbacks if getBoundingClientRect is ready yet
+        const width = rect.width || 120;
+        const height = rect.height || 28;
+
+        if (badge.x <= 0) {
+          badge.x = 0;
+          badge.vx *= -1;
+        } else if (badge.x + width >= container.clientWidth) {
+          badge.x = container.clientWidth - width;
+          badge.vx *= -1;
+        }
+
+        if (badge.y <= 0) {
+          badge.y = 0;
+          badge.vy *= -1;
+        } else if (badge.y + height >= container.clientHeight) {
+          badge.y = container.clientHeight - height;
+          badge.vy *= -1;
+        }
+
+        // Apply new position
+        el.style.transform = `translate(${badge.x}px, ${badge.y}px)`;
+      });
+
+      animationFrameId = requestAnimationFrame(updatePhysics);
+    };
+
+    // Start loop
+    animationFrameId = requestAnimationFrame(updatePhysics);
+
+    // Cleanup
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
     <section id="intro">
-      <div className="floating-badges">
+      <div className="floating-badges" ref={containerRef}>
         {badges.map((badge, index) => (
           <img 
             key={index} 
             src={badge} 
             alt={`badge-${index}`} 
             className="floating-badge"
-            style={badgeStyles[index]} 
+            ref={(el) => (badgeRefs.current[index] = el)}
           />
         ))}
       </div>
