@@ -18,6 +18,13 @@ const badges = [
   "https://img.shields.io/badge/Flutter-white?style=for-the-badge&logo=flutter&logoColor=black",
   "https://img.shields.io/badge/Dart-white?style=for-the-badge&logo=dart&logoColor=black",
   "https://img.shields.io/badge/Amazon_AWS-white?style=for-the-badge&logo=amazon-aws&logoColor=black",
+  "https://img.shields.io/badge/Node.js-white?style=for-the-badge&logo=node.js&logoColor=black",
+  "https://img.shields.io/badge/Next.js-white?style=for-the-badge&logo=next.js&logoColor=black",
+  "https://img.shields.io/badge/PostgreSQL-white?style=for-the-badge&logo=postgresql&logoColor=black",
+  "https://img.shields.io/badge/mySQL-white?style=for-the-badge&logo=mysql&logoColor=black",
+  "https://img.shields.io/badge/Oracle-white?style=for-the-badge&logo=oracle&logoColor=black",
+  "https://img.shields.io/badge/MongoDB-white?style=for-the-badge&logo=mongodb&logoColor=black",
+  "https://img.shields.io/badge/TypeScript-white?style=for-the-badge&logo=typescript&logoColor=black"
 ];
 
 const Intro = () => {
@@ -87,10 +94,10 @@ const Intro = () => {
     <section id="intro">
       <div className="floating-badges" ref={containerRef}>
         {badges.map((badge, index) => (
-          <img 
-            key={index} 
-            src={badge} 
-            alt={`badge-${index}`} 
+          <img
+            key={index}
+            src={badge}
+            alt={`badge-${index}`}
             className="floating-badge"
             ref={(el) => (badgeRefs.current[index] = el)}
           />
