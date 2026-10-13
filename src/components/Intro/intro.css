@@ -1,171 +1,187 @@
-#intro {
-    height: calc(100vh - 4.4rem);
-    width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
+.hero {
+  padding-top: calc(var(--nav-h) + 40px);
+  scroll-margin-top: 0;
 }
 
-.bg {
-    position: absolute;
-    top: -4rem;
-    right: 200px;
-    z-index: -1;
-    object-fit: cover;
-    height: 100vh;
-    padding-top: 30vh;
-    will-change: transform;
-    transition: opacity 0.3s ease-in;
+.hero-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 42px);
+  animation: hero-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.bg-loading {
-    position: absolute;
-    top: -4rem;
-    right: 200px;
-    z-index: -1;
-    height: 100vh;
-    padding-top: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1.2rem;
-    animation: pulse 1.5s infinite;
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotate(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-@keyframes pulse {
-    0% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.6;
-    }
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 22px;
 }
 
-.introContent {
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    position: relative;
-    z-index: 1;
+.hero-handle {
+  font-size: clamp(11px, 2.4vw, 15px);
 }
 
-.hello {
-    font-size: 1.75rem;
-    font-weight: 100;
-    color: white;
+.hero-date {
+  font-size: clamp(9px, 2vw, 11px);
+  color: var(--ink-soft);
 }
 
-.introName {
-    color: #007bff;
+.hero-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
 }
 
-.introPara {
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: white;
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: clamp(30px, 8vw, 50px);
+  line-height: 1.22;
+  margin-top: 6px;
 }
 
-.btn {
-    background: white;
-    margin: 1rem 0;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 2rem;
+.hero-name {
+  color: var(--blue);
+  margin-top: 8px;
+  text-shadow: 3px 3px 0 rgba(43, 43, 43, 0.15);
+  min-height: 1.22em;
+  white-space: nowrap;
 }
 
-.btnImg {
-    object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+.hero-name .cursor {
+  width: 0.45em;
+  height: 0.85em;
+  background: var(--ink);
 }
 
-
-.buttonsContainer {
-    display: flex;
-    justify-content: left;
-    /* Center the buttons horizontally */
-    gap: 20px;
-    /* Optional: add some space between the buttons */
+/* polaroid photo */
+.polaroid {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(104px, 24vw, 136px);
+  padding: 7px 7px 20px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(3deg);
+  margin: 4px 4px 0 0;
+  transition: transform 0.3s ease;
 }
 
-@media screen and (max-width:768px) {
-
-    #intro {
-        height: 100vh;
-    }
-
-    .introPara {
-        font-size: small;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-        color: white;
-    }
-
-    .bg {
-        position: absolute;
-        top: -130px;
-        /* Adjust if necessary */
-        right: 30px;
-        /* Reset or adjust this value to ensure it doesn't create horizontal overflow */
-        width: 200px;
-        /* Ensure it does not exceed the viewport width */
-        height: 700px;
-        /* Maintain aspect ratio */
-        z-index: -1;
-        /* Cover the designated area without stretching */
-
-    }
-
-    .introContent {
-        font-size: 5vw;
-        height: 280vw;
-        /* Adjust based on your design needs */
-    }
-
-    .hello {
-        font-size: 4.5vw;
-    }
-
-    .buttonsContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        /* Center the buttons horizontally */
-        margin-top: 25px;
-    }
-
-    /* .imageDiv {} */
-
+.polaroid:hover {
+  transform: rotate(-1deg) scale(1.04);
 }
 
-.floating-badges {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
+.polaroid .tape {
+  width: 60px;
+  height: 16px;
+  top: -9px;
 }
 
-.floating-badge {
-    position: absolute;
-    opacity: 0.7;
-    border-radius: 4px;
-    will-change: transform;
+.polaroid-img {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  background-image: radial-gradient(rgba(43, 43, 43, 0.14) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.polaroid-img img {
+  width: 100%;
+  height: auto;
+  margin-top: 4%;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 26px 0 26px;
+}
+
+.hero-chips .chip {
+  box-shadow: none;
+}
+
+.hero-chips .chip + .chip {
+  border-left: none;
+}
+
+.hero-chips a.chip:hover {
+  background: var(--paper);
+}
+
+.chip--pink {
+  background: #fbe1ea;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.hero-bio {
+  border-left: 4px solid var(--olive);
+  padding: 4px 0 4px 18px;
+  font-size: clamp(15px, 2.6vw, 18px);
+  line-height: 1.75;
+}
+
+.hero-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0 0 22px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.hero-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 10px 14px;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  line-height: 1.4;
+  transition: transform 0.15s ease;
+}
+
+.hero-resume:hover {
+  transform: rotate(-0.8deg) scale(1.01);
+}
+
+@media (max-width: 480px) {
+  .hero-main {
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 100%;
+  }
 }

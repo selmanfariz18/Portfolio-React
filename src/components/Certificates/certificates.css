@@ -1,123 +1,108 @@
-#certificates {
-    overflow: hidden;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 65rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 1rem;
-    color: white;
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 28px) clamp(16px, 2.5vw, 22px);
 }
 
-.projectsTitle {
-    margin: 1rem 0;
-    font-size: 3rem;
+.cert {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.projectsBlocks {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 20px;
+a.cert:hover {
+  transform: translate(-3px, -3px) rotate(0deg) !important;
+  box-shadow: 7px 7px 0 var(--ink);
 }
 
-.card {
-    --blur: 16px;
-    --size: clamp(300px, 50vmin, 600px);
-    width: var(--size);
-    aspect-ratio: 4 / 3;
-    position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
-    color: #000;
-    transform: translateZ(0);
-    margin: 10px;
-    flex: 1 1 calc(33% - 40px);
-    will-change: transform;
-    transition: transform 0.3s ease-out;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.cert-img {
+  border: 2px solid var(--ink);
+  overflow: hidden;
+  background: #fff;
+  aspect-ratio: 4 / 3;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.card__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-out;
-    will-change: transform;
+a.cert:hover .cert-img img {
+  transform: scale(1.06);
 }
 
-.card:hover .card__img {
-    transform: scale(1.05);
+.cert-img--badge {
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-size: 10px 10px;
 }
 
-.card__footer {
-    background: hsl(0 0% 100% / 0.75);
-    backdrop-filter: blur(var(--blur));
-    padding: 0 1.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 0.5ch;
-    height: 30%;
-    align-content: center;
+.cert-img--badge.is-yellow {
+  background-color: var(--yellow);
+  color: var(--ink);
+  background-image: radial-gradient(rgba(43, 43, 43, 0.18) 1px, transparent 1px);
 }
 
-.card__footer span:first-of-type {
-    font-size: calc(var(--size) * 0.025);
-    font-weight: 500;
+.cert-body {
+  padding: 12px 4px 4px;
 }
 
-.card__footer span:last-of-type {
-    font-size: calc(var(--size) * 0.020);
-    color: #666;
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
 }
 
-.projectsBtn {
-    margin: 3rem 0;
-    padding: 0.5rem 2.5rem;
-    border: none;
-    border-radius: 2rem;
-    background: white;
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s ease-out;
+.cert-meta .tag {
+  font-size: 7px;
+  padding: 4px 6px;
 }
 
-.projectsBtn:hover {
-    transform: translateY(-2px);
+.cert-body h3 {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
-@media screen and (max-width: 780px) {
-    .card {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
-    .projectsTitle {
-        font-size: 2rem;
-    }
-
-    .card__footer span:first-of-type {
-        font-size: 1.2rem;
-    }
-
-    .card__footer span:last-of-type {
-        font-size: 0.9rem;
-    }
+.cert-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--ink-soft);
 }
 
-/* .projectBlocks and related class style are fetched from projects.css */
+.cert-more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(32px, 5vw, 44px);
+}
+
+@media (max-width: 900px) {
+  .cert-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cert-body h3 {
+    font-size: 14px;
+  }
+}

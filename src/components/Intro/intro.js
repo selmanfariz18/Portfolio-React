@@ -1,143 +1,93 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { LuArrowRight, LuDownload, LuMapPin } from "react-icons/lu";
+import { SiGithub } from "react-icons/si";
+import photo from "../../assets/image.png";
+import resume from "../../assets/Resume_Selman.pdf";
+import { profile } from "../../data";
 import "./intro.css";
-import bg from "../../assets/image.png";
-// import btnImg from "../../assets/hireme.png";
-// import { Link } from "react-router-dom";
-// import resume from "../../assets/Resume_Selman.pdf";
 
-const badges = [
-  "https://img.shields.io/badge/HTML-white?style=for-the-badge&logo=html5&logoColor=black",
-  "https://img.shields.io/badge/CSS-white?&style=for-the-badge&logo=css3&logoColor=black",
-  "https://img.shields.io/badge/Tailwind_CSS-white?style=for-the-badge&logo=tailwind-css&logoColor=black",
-  "https://img.shields.io/badge/Bootstrap-white?style=for-the-badge&logo=bootstrap&logoColor=black",
-  "https://img.shields.io/badge/JavaScript-white?style=for-the-badge&logo=javascript&logoColor=black",
-  "https://img.shields.io/badge/React-white?style=for-the-badge&logo=react&logoColor=black",
-  "https://img.shields.io/badge/Vue.js-white?style=for-the-badge&logo=vue.js&logoColor=black",
-  "https://img.shields.io/badge/Django-white?style=for-the-badge&logo=django&logoColor=black",
-  "https://img.shields.io/badge/Python-white?style=for-the-badge&logo=python&logoColor=black",
-  "https://img.shields.io/badge/Flutter-white?style=for-the-badge&logo=flutter&logoColor=black",
-  "https://img.shields.io/badge/Dart-white?style=for-the-badge&logo=dart&logoColor=black",
-  "https://img.shields.io/badge/Amazon_AWS-white?style=for-the-badge&logo=amazon-aws&logoColor=black",
-  "https://img.shields.io/badge/Node.js-white?style=for-the-badge&logo=node.js&logoColor=black",
-  "https://img.shields.io/badge/Next.js-white?style=for-the-badge&logo=next.js&logoColor=black",
-  "https://img.shields.io/badge/PostgreSQL-white?style=for-the-badge&logo=postgresql&logoColor=black",
-  "https://img.shields.io/badge/mySQL-white?style=for-the-badge&logo=mysql&logoColor=black",
-  "https://img.shields.io/badge/Oracle-white?style=for-the-badge&logo=oracle&logoColor=black",
-  "https://img.shields.io/badge/MongoDB-white?style=for-the-badge&logo=mongodb&logoColor=black",
-  "https://img.shields.io/badge/TypeScript-white?style=for-the-badge&logo=typescript&logoColor=black"
-];
+const today = () =>
+  new Date()
+    .toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+    .toUpperCase();
 
 const Intro = () => {
-  const containerRef = useRef(null);
-  const badgeRefs = useRef([]);
+  const name = profile.firstName;
+  const [typed, setTyped] = useState("");
 
+  // type the name out once, retro-terminal style
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Initialize physics state for each badge
-    const badgePhysics = badges.map(() => ({
-      x: Math.random() * (container.clientWidth - 150), // Initial X (avoiding right edge overflow)
-      y: Math.random() * (container.clientHeight - 40), // Initial Y
-      vx: (Math.random() - 0.5) * 1.5, // Velocity X (-0.75 to 0.75 pixels per frame)
-      vy: (Math.random() - 0.5) * 1.5, // Velocity Y
-    }));
-
-    let animationFrameId;
-
-    const updatePhysics = () => {
-      badgePhysics.forEach((badge, index) => {
-        const el = badgeRefs.current[index];
-        if (!el) return;
-
-        // Update positions
-        badge.x += badge.vx;
-        badge.y += badge.vy;
-
-        // Collision logic (bouncing off walls)
-        const rect = el.getBoundingClientRect();
-        // Fallbacks if getBoundingClientRect is ready yet
-        const width = rect.width || 120;
-        const height = rect.height || 28;
-
-        if (badge.x <= 0) {
-          badge.x = 0;
-          badge.vx *= -1;
-        } else if (badge.x + width >= container.clientWidth) {
-          badge.x = container.clientWidth - width;
-          badge.vx *= -1;
-        }
-
-        if (badge.y <= 0) {
-          badge.y = 0;
-          badge.vy *= -1;
-        } else if (badge.y + height >= container.clientHeight) {
-          badge.y = container.clientHeight - height;
-          badge.vy *= -1;
-        }
-
-        // Apply new position
-        el.style.transform = `translate(${badge.x}px, ${badge.y}px)`;
-      });
-
-      animationFrameId = requestAnimationFrame(updatePhysics);
-    };
-
-    // Start loop
-    animationFrameId = requestAnimationFrame(updatePhysics);
-
-    // Cleanup
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      setTyped(name);
+      return undefined;
+    }
+    let i = 0;
+    const id = setInterval(() => {
+      i += 1;
+      setTyped(name.slice(0, i));
+      if (i >= name.length) clearInterval(id);
+    }, 140);
+    return () => clearInterval(id);
+  }, [name]);
 
   return (
-    <section id="intro">
-      <div className="floating-badges" ref={containerRef}>
-        {badges.map((badge, index) => (
-          <img
-            key={index}
-            src={badge}
-            alt={`badge-${index}`}
-            className="floating-badge"
-            ref={(el) => (badgeRefs.current[index] = el)}
-          />
-        ))}
-      </div>
-      <div className="introContent">
-        <span className="hello">Hello,</span>
-        <span className="introText">
-          I'm <span className="introName">Selman</span>
-          <br />
-          Developer
-        </span>
-        <p className="introPara">
-          A CS Engineer by degree <br />
-          A Software Developer at <strong>Systalent</strong> by profession<br />
-          A vibe-coder by nature
-          {/* I craft clean, creative software solutions with a flow-state
-          mindset — where great code meets great instinct. From building full-stack applications to
-          exploring the edges of cybersecurity, I turn ideas into real, working products that speak
-          for themselves. */}
-        </p>
-        {/* <div className="buttonsContainer">
-          <Link to="/contact">
-            <button className="btn">
-              <img src={btnImg} alt="Hire Me" className="btnImg" />
-              Hire Me
-            </button>
-          </Link>
-          <a href={resume} target="_blank" rel="noopener noreferrer">
-            <button className="btn">Resume</button>
+    <section id="home" className="hero">
+      <div className="container">
+        <article className="hero-card paper paper--lg">
+          <header className="hero-top">
+            <span className="pixel hero-handle">★ {profile.handle}</span>
+            <span className="pixel hero-date">{today()}</span>
+          </header>
+
+          <div className="hero-main">
+            <h1 className="hero-title pixel">
+              <span className="hero-hi">HI,</span>
+              <span className="hero-hi">I'M</span>
+              <span className="hero-name" aria-label={name}>
+                <span aria-hidden="true">{typed}</span>
+                <span className="cursor" aria-hidden="true" />
+              </span>
+            </h1>
+
+            <figure className="polaroid">
+              <span className="tape" />
+              <div className="polaroid-img">
+                <img src={photo} alt="Selmanul Farizy" width="653" height="1294" />
+              </div>
+            </figure>
+          </div>
+
+          <div className="hero-chips">
+            <a className="chip" href={profile.github} target="_blank" rel="noopener noreferrer">
+              <SiGithub size={16} /> {profile.githubHandle}
+            </a>
+            <span className="chip chip--pink pixel">{profile.role.toUpperCase()}</span>
+          </div>
+
+          <p className="hero-bio">
+            Selman is a <strong>Programmer Analyst at Systalent</strong>, building payment
+            integrations and shopping features for a Qatar-based e-commerce platform with{" "}
+            <strong>TypeScript, Node.js and PostgreSQL</strong>. CS engineer by degree,
+            ex-startup co-founder, security-curious, and a <strong>vibe-coder</strong> by nature.
+          </p>
+
+          <p className="hero-loc">
+            <LuMapPin size={16} /> {profile.location}
+          </p>
+
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn--dark">
+              View Projects <LuArrowRight size={16} />
+            </a>
+            <a href="#contact" className="btn btn--light">
+              Contact Me
+            </a>
+          </div>
+
+          <a className="hero-resume" href={resume} target="_blank" rel="noopener noreferrer">
+            <LuDownload size={14} /> Grab my résumé (PDF)
           </a>
-        </div> */}
-      </div>
-      <div className="imageDiv">
-        <img
-          src={bg}
-          alt="profile"
-          className="bg"
-          loading="lazy"
-        />
+        </article>
       </div>
     </section>
   );

@@ -1,161 +1,118 @@
-import React from 'react';
-import './projects.css';
+import React from "react";
+import { LuArrowRight, LuGithub, LuArrowUpRight } from "react-icons/lu";
+import { spotlightProjects, projects, profile } from "../../data";
+import "./projects.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faPlay } from '@fortawesome/free-solid-svg-icons';
+const Projects = () => (
+  <section id="projects" className="section">
+    <div className="container">
+      <div className="section-head reveal">
+        <h2>
+          <span className="star">★</span> Project Spotlight <span className="star">★</span>
+        </h2>
+        <span className="kicker">BUILT BY ME</span>
+      </div>
 
-// Import images directly
-import dot_connect from '../../assets/projects/dot_connect.png';
-import ictacme from '../../assets/projects/ICTACME.png';
-import hack3_0 from '../../assets/projects/Hack_3.0.png';
-import fluid_simulator from '../../assets/projects/fluid_simulator.png';
-import mp3_player from '../../assets/projects/mp3_player.png';
-import weather_web from '../../assets/projects/weather_web.png';
-import qr_code_generator from '../../assets/projects/qr_code_generator.png';
+      <div className="spotlight-list">
+        {spotlightProjects.map((p, i) => (
+          <article
+            key={p.name}
+            className={`spotlight paper paper--lg reveal ${i % 2 ? "tilt-r" : "tilt-l"}`}
+          >
+            <span className="tape" />
+            <header className="spotlight-top">
+              <span className="spotlight-num pixel">0{i + 1}</span>
+              <span className="spotlight-domain">{p.domain}</span>
+            </header>
 
-const Projects = () => {
-    return (
-        <section id='projects'>
-            <h2 className='projectsTitle'>My Projects</h2>
-            <span className='projectsDesc'>The projects i have done towards now are listed here, most of them are open source and complete code available on GitHub.</span>
-            <div className='projectsBlocks'>
-                {/* Dot_connect */}
-                <div className="card">
-                    <img
-                        src={dot_connect}
-                        alt="Dot Connect Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Dot_Connect</span>
-                        <span>Game developed using React js</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/Dot_connect.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://dot-connect-omega.vercel.app/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
+            <div className="spotlight-body">
+              <a
+                className="spotlight-shot"
+                href={p.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${p.name}`}
+              >
+                <span className="shot-bar" aria-hidden="true">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <img src={p.image} alt={`${p.name} screenshot`} loading="lazy" />
+              </a>
+
+              <div className="spotlight-text">
+                <p className="spotlight-name">{p.name}</p>
+                <h3 className="pixel">
+                  {p.headline[0]} <span className="accent">{p.headline[1]}</span>
+                </h3>
+                <p className="spotlight-desc">{p.description}</p>
+                <ul className="stack-list">
+                  {p.stack.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+                <div className="spotlight-actions">
+                  <a className="btn btn--dark" href={p.live} target="_blank" rel="noopener noreferrer">
+                    {p.cta} <LuArrowRight size={16} />
+                  </a>
+                  <a className="btn btn--light btn--sm" href={p.code} target="_blank" rel="noopener noreferrer">
+                    <LuGithub size={14} /> Code
+                  </a>
                 </div>
-                {/* Fluid_simulator */}
-                <div className="card">
-                    <img
-                        src={fluid_simulator}
-                        alt="Fluid Simulator Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Fluid_simulator</span>
-                        <span>HTML, CSS, WEBGL-js</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/Fluid-simulator.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/Fluid-simulator/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
-                {/* Qr_code_generator */}
-                <div className="card">
-                    <img
-                        src={qr_code_generator}
-                        alt="Qr Code Generator Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>QR Code Generator</span>
-                        <span>HTML, CSS</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/Qr-generator-HTML-' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/Qr-generator-HTML-/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
-                {/* Weather_web */}
-                <div className="card">
-                    <img
-                        src={weather_web}
-                        alt="Weather Web Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Weather App</span>
-                        <span>HTML, CSS, JS</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/weather_app_web.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/weather_app_web/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
-                {/* ICTACME */}
-                <div className="card">
-                    <img
-                        src={ictacme}
-                        alt="ICTACME Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>ICTACME</span>
-                        <span>HTML, Tailwind_CSS</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/ICTACME.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://ictacme.vercel.app/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
-                {/* Hack 3.0 */}
-                <div className="card">
-                    <img
-                        src={hack3_0}
-                        alt="Hack 3.0 Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>Hack_3.0</span>
-                        <span>HTML, CSS, JS</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/hack3.0.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            <a href='https://selmanfariz18.github.io/hack3.0/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </span>
-                </div>
-                {/* MP3 player */}
-                <div className="card">
-                    <img
-                        src={mp3_player}
-                        alt="MP3 Player Project"
-                        className="card__img"
-                        loading="lazy"
-                    />
-                    <span className="card__footer">
-                        <span>MP3-Player</span>
-                        <span>Python</span>
-                    </span>
-                    <span className="card__action">
-                        <div className='cardbtns'>
-                            <a href='https://github.com/selmanfariz18/MP3-player.git' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faCode} /></a>
-                            {/* <a href='/' target="_blank" rel="noopener noreferrer" role='button'><FontAwesomeIcon icon={faPlay} /></a> */}
-                        </div>
-                    </span>
-                </div>
+              </div>
             </div>
-            <a href='https://github.com/selmanfariz18?tab=repositories' className='projectsBtn'>See More on my Github Repo</a>
-        </section>
-    );
-}
+          </article>
+        ))}
+      </div>
+
+      <h3 className="more-title pixel reveal">More from the workbench</h3>
+
+      <div className="project-grid">
+        {projects.map((p, i) => (
+          <article
+            key={p.name}
+            className={`pcard paper paper--plain reveal ${i % 2 ? "tilt-r" : "tilt-l"}`}
+            style={{ "--delay": `${(i % 3) * 90}ms` }}
+          >
+            <span className={`tape ${i % 2 ? "tape--right" : "tape--left"}`} />
+            <div className="pcard-img">
+              <img src={p.image} alt={`${p.name} screenshot`} loading="lazy" />
+            </div>
+            <div className="pcard-body">
+              <h4 className="pixel">{p.name}</h4>
+              <p>{p.blurb}</p>
+              <ul className="stack-list stack-list--sm">
+                {p.stack.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+              <div className="pcard-links">
+                <a href={p.code} target="_blank" rel="noopener noreferrer" className="link-pixel">
+                  <LuGithub size={13} /> Code
+                </a>
+                {p.live && (
+                  <a href={p.live} target="_blank" rel="noopener noreferrer" className="link-pixel">
+                    Live <LuArrowUpRight size={13} />
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))}
+
+        <a
+          className="pcard pcard--more reveal tilt-r"
+          href={`${profile.github}?tab=repositories`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="pixel">See everything on GitHub</span>
+          <LuArrowUpRight size={28} />
+        </a>
+      </div>
+    </div>
+  </section>
+);
 
 export default Projects;

@@ -1,0 +1,385 @@
+/* ───────────────────────── Theme tokens ───────────────────────── */
+:root {
+  --paper: #f6eee3;
+  --paper-deep: #efe4d4;
+  --card: #fbfaf7;
+  --ink: #2b2b2b;
+  --ink-soft: #5b5650;
+  --line: rgba(43, 43, 43, 0.09);
+  --blue: #6495ed;
+  --blue-deep: #3f6fd1;
+  --olive: #556b2f;
+  --red: #c0392b;
+  --yellow: #f5d547;
+  --lime: #b5e655;
+  --tape: rgba(236, 226, 196, 0.85);
+
+  --font-pixel: "Press Start 2P", system-ui, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", monospace;
+
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-lg: 10px 10px 0 var(--ink);
+  --shadow-sm: 4px 4px 0 var(--ink);
+
+  --nav-h: 96px;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  /* subtle paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.22 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px dashed var(--blue);
+  outline-offset: 3px;
+}
+
+.pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* ───────────────────────── Layout ───────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: clamp(56px, 9vw, 110px) 0 0;
+  scroll-margin-top: calc(var(--nav-h) - 10px);
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.section-head h2 {
+  font-family: var(--font-pixel);
+  font-size: clamp(14px, 2.4vw, 20px);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-head h2 .star {
+  font-size: 0.8em;
+}
+
+.section-head .kicker {
+  font-family: var(--font-pixel);
+  font-size: clamp(9px, 1.4vw, 12px);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+/* ───────────────────────── Paper card ───────────────────────── */
+.paper {
+  position: relative;
+  background-color: var(--card);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 27px,
+    var(--line) 27px,
+    var(--line) 28px
+  );
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.paper--lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.paper--plain {
+  background-image: none;
+}
+
+.tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 92px;
+  height: 22px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--tape);
+  border: 1px solid rgba(43, 43, 43, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.tape--left {
+  left: 18%;
+  transform: translateX(-50%) rotate(-8deg);
+}
+
+.tape--right {
+  left: 82%;
+  transform: translateX(-50%) rotate(7deg);
+}
+
+/* ───────────────────────── Tags & chips ───────────────────────── */
+.tag {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  line-height: 1.4;
+  padding: 6px 8px;
+  color: #fff;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  white-space: nowrap;
+}
+
+.tag--blue { background: var(--blue); }
+.tag--olive { background: var(--olive); }
+.tag--red { background: var(--red); }
+.tag--yellow { background: var(--yellow); color: var(--ink); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 12px;
+  background: var(--card);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+/* ───────────────────────── Buttons ───────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  line-height: 1;
+  padding: 16px 22px;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--light {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.btn--blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn--yellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.btn--sm {
+  font-size: 9px;
+  padding: 11px 14px;
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+.link-pixel {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--blue-deep);
+}
+
+.link-pixel:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ───────────────────────── Feature mini-boxes ───────────────────────── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.feature {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 14px;
+}
+
+.feature svg {
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.feature:nth-child(2) svg { color: var(--red); }
+.feature:nth-child(3) svg { color: var(--olive); }
+
+.feature h4 {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.feature p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 640px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────────────────────── Quote ───────────────────────── */
+.pull-quote {
+  border-left: 4px solid var(--blue);
+  padding: 4px 0 4px 16px;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* ───────────────────────── Reveal on scroll ───────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* tilted cards keep their tilt once revealed */
+.reveal.tilt-l.is-visible { transform: rotate(-1.2deg); }
+.reveal.tilt-r.is-visible { transform: rotate(1.1deg); }
+.tilt-l:not(.reveal) { transform: rotate(-1.2deg); }
+.tilt-r:not(.reveal) { transform: rotate(1.1deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ───────────────────────── Blinking cursor ───────────────────────── */
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.9em;
+  background: var(--blue);
+  margin-left: 6px;
+  vertical-align: -0.05em;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

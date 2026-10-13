@@ -1,50 +1,55 @@
 .footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: white;
-    padding-top: 0;
-    padding-bottom: 0;
-    z-index: 1000;
-    /* Ensures the footer stays on top of other content */
+  margin-top: clamp(80px, 12vw, 130px);
+  padding: 34px 0 40px;
+  border-top: 2px solid var(--ink);
+  background: var(--paper-deep);
 }
 
-.footer-container {
-    padding-top: 0px;
-    padding-bottom: 0px;
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 26px;
 }
 
-.social-buttons {
-    margin-bottom: 1rem;
-    background-color: white;
-    padding-top: 0px;
-    padding-bottom: 0px;
+.footer-nav a {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
-.social-button {
-    display: inline-block;
-    margin: 0.5rem;
-    color: #000;
-    /* Icon color */
-    font-size: 20px;
-    background-color: white;
-    padding-bottom: 0;
+.footer-nav a:hover {
+  color: var(--blue);
 }
-
-
-
-/* Add other button styles */
 
 .footer-bottom {
-    text-align: center;
-    color: #000;
-    background-color: white;
-    padding-bottom: 0.5rem;
-    font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 2px dashed rgba(43, 43, 43, 0.2);
+  font-size: 14px;
+  color: var(--ink-soft);
 }
 
-.footer-bottom a {
-    color: #000;
-    font-size: 10px;
+.footer-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--ink);
+}
+
+.footer-top:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 560px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
