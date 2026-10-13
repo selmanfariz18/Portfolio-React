@@ -21,6 +21,8 @@ import tinkerhack from "./assets/certificates/Selmanul_Farizy_K_A_Tinkerhack.jpg
 import ai_workshop from "./assets/certificates/Ai workshop certificate Tinkerhub collab-1.png";
 import python_workshop from "./assets/certificates/python_workshop-1.png";
 import coders from "./assets/certificates/100coders certificate .jpg";
+import ocsa from "./assets/certificates/ocsa.jpeg";
+import prompt_engineering from "./assets/certificates/prompt engineering.jpeg";
 
 export const profile = {
   handle: "FARIZ.DEB",
@@ -264,8 +266,8 @@ export const timeline = [
 ];
 
 export const certificates = [
-  { title: "Offenso Certified Security Analyst", issuer: "Offenso Hackers Academy", date: "Jul 2025", isNew: true },
-  { title: "Prompt Engineering for ChatGPT", issuer: "Great Learning", date: "Nov 2025", isNew: true },
+  { title: "Offenso Certified Security Analyst", issuer: "Offenso Hackers Academy", date: "Jul 2025", isNew: true, image: ocsa, link: ocsa },
+  { title: "Prompt Engineering for ChatGPT", issuer: "Great Learning", date: "Nov 2025", isNew: true, image: prompt_engineering, link: "https://www.mygreatlearning.com/certificate/ZPGYCIDI" },
   { title: "Organizer · Tink-Her-Hack 2.0", issuer: "TinkerHub", date: "Mar 2024", image: tinkerhack, link: "https://drive.google.com/uc?id=1PRQeuMVchNiaHWWhrbozfwzn_rxTRZEP" },
   { title: "Finalist · 100 Coders 2023", issuer: "Gtech MuLearn", date: "Nov 2023", image: coders, link: "https://drive.google.com/uc?id=1dxgwAvxvch5zkRHzf48BLXNtaQW9TIH2" },
   { title: "India FOSS 3.0", issuer: "TinkerHub", date: "Oct 2023", image: foss3_0, link: "https://drive.google.com/uc?id=1CDdYNNFJ0hu753g3MrFwfP-k8X4k2Z-A" },
